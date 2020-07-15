@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "testcl-9028"
+    labels:
+        app: "testcl-9028"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: testcl7ab8-testcl-9028.dfea7093d19b4fae933f.westeurope.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "testcl-9028"
+                servicePort: 80
