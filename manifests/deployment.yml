@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "testcl-9028"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "testcl-9028"
+    spec:
+      containers:
+        - name: "testcl-9028"
+          image: "registrycont909.azurecr.io/testcl"
+          ports:
+          - containerPort: 80
